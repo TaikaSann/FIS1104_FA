@@ -1,0 +1,270 @@
+
+
+
+:root {
+    --primary-color: #d1111d;
+    --secondary-color: #0088cc; 
+    --bg-dark: #0d0d11; 
+    --card-bg: #181820;
+    --text-light: #f4f4f6;
+    --text-muted: #a0a0a0;
+    --border-color: #2a2a35;
+    --font-main: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: rgba(13, 13, 17, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: none;
+}
+
+.logo h1 span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                url('images/spiderBackground.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-shadow: none;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #a00b14;
+    transform: translateY(-2px);
+}
+
+
+.section-container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-container h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: none;
+}
+
+
+.story-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.story-card.plot-twist {
+    border-left: 4px solid var(--primary-color);
+    box-shadow: none;
+}
+
+.story-card code {
+    color: var(--secondary-color);
+    font-family: monospace;
+}
+
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: var(--card-bg);
+}
+
+th, td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.multimedia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.media-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.media-card video, .media-card audio {
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+.caption {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+
+.recruitment-form {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    border-radius: 4px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #060608;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
